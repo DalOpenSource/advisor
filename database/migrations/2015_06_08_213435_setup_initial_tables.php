@@ -17,8 +17,8 @@ class SetupInitialTables extends Migration {
 			$table->increments('id');
 			$table->string('name');
 			$table->string('email')->unique();
-			$table->string('password', 60);
-			$table->integer('role');
+			$table->string('password', 100);
+			$table->boolean('is_admin')->default(FALSE);
 			$table->rememberToken();
 			$table->timestamps();
 		});
